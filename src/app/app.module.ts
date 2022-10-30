@@ -3,16 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ListarComponent } from './Persona/listar/listar.component';
+import { HttpClientModule } from '@angular/common/http';
 import { PersonaModule } from './Persona/persona.module';
 @NgModule({
   declarations: [
     AppComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PersonaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

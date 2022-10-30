@@ -3,7 +3,7 @@
         <div class="card-header">
             <h3>Personas</h3>
             <div class="card-body">
-                <table class="table table-hover">
+                <table class="table table-hover" >
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -13,10 +13,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="text-center">
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                        <tr class="text-center" *ngFor="let persona of personas">
+                            <td> {{ persona.id }} </td>
+                            <td> {{ persona.name }} </td>
+                            <td> {{ persona.lastName }} </td>
                             <td>
                                 <button class="btn btn-warning">Editar</button>
                                 <button class="btn btn-danger">Borrar</button>

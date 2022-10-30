@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Persona } from '../interfaces/persona.interface';
+import { PersonaService } from '../services/persona.service';
+
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
@@ -8,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarComponent implements OnInit {
 
-  constructor() { }
+  personas: Persona[] = [];
+
+  constructor( private personaService: PersonaService ) { }
+
 
   ngOnInit(): void {
+
+    this.personaService.getPersonas().subscribe({
+      next: ( personas => {
+        this.personas = personas;
+      } ),
+    });
   }
 
 }

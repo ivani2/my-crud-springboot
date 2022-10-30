@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    ListarComponent,
+    // ListarComponent,
     AddComponent,
     EditComponent,
     HomeComponent,
